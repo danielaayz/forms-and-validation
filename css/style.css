@@ -7,12 +7,23 @@ body {
    width: 80%;
    max-width: 1400px;
    display: flex;
+   margin: auto;
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
 }
 
 .card__image {
 }
 
+.card__content--image {
+   width: 50%;
+}
+
 .card__content {
+   width: 100%;
    background-color: #ececec;
 }
 
