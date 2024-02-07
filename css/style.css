@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-   width: 80vh;
+   width: 80%;
    max-width: 1400px;
    display: flex;
 }
