@@ -8,3 +8,17 @@ body {
    max-width: 1400px;
    display: flex;
 }
+
+.card__image {
+}
+
+.card__content {
+   background-color: #ececec;
+}
+
+.card__content--title {
+   font-size: 27px;
+   font-weight: normal;
+   text-align: center;
+   color: #181818;
+}
