@@ -7,6 +7,7 @@
 }
 
 body {
+   background-color: #ececec;
    font-family: "Lato", sans-serif;
    font-size: 15px;
    font-weight: 400;
@@ -16,7 +17,7 @@ body {
 }
 
 .container {
-   width: 80%;
+   width: 90%;
    max-width: 1400px;
    display: flex;
    margin: auto;
@@ -29,7 +30,6 @@ body {
 
 .card__image {
    width: 100%;
-   background-color: beige;
 }
 
 .card__content--image {
@@ -89,6 +89,57 @@ body {
    position: absolute;
    opacity: 0;
    cursor: pointer;
+}
+
+.checkbox-label .checkbox-custom {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   height: 24px;
+   width: 24px;
+   background-color: transparent;
+   border-radius: 5px;
+   border: 2px solid #fff;
+}
+
+.checkbox-label .checkbox-customer::after {
+   position: absolute;
+   content: "";
+   left: 12px;
+   top: 12px;
+   height: 0px;
+   width: 0px;
+   border-radius: 5px;
+   border: solid #181818;
+   border-width: 0 3px 3px 0;
+   -webkit-transform: rotate(0deg) scale(0);
+   -ms-transform: rotate(0deg) scale(0);
+   transform: rotate(0deg) scale(0);
+   opacity: 1;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom {
+   background-color: #fff;
+   border-radius: 5px;
+   -webkit-transform: rotate(0deg) scale(1);
+   -ms-transform: rotate(0deg) scale(1);
+   opacity: 1;
+   border: 2px solid #fff;
+}
+
+.checkbox-label input:checked ~ .checkbox-customer::after {
+   -webkit-transform: rotate(45deg) scale(1);
+   -ms-transform: rotate(45deg) scale(1);
+   transform: rotate(45deg) scale(1);
+   opacity: 1;
+   left: 8px;
+   top: 3px;
+   width: 6px;
+   height: 12px;
+   border: solid #009bff;
+   border-width: 0 2px 2px 0;
+   background-color: transparent;
+   border-radius: 0;
 }
 
 .input-title {
