@@ -2,3 +2,9 @@ body {
    margin: 0;
    padding: 0;
 }
+
+.container {
+   width: 80vh;
+   max-width: 1400px;
+   display: flex;
+}
