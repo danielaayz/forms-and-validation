@@ -43,3 +43,7 @@ body {
    font-size: 27px;
    text-align: center;
 }
+
+.form__content--name {
+   display: flex;
+}
