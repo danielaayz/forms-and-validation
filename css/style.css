@@ -1,6 +1,17 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+   box-sizing: border-box;
    margin: 0;
    padding: 0;
+}
+
+body {
+   font-family: "Lato", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   font-weight: normal;
+   color: #181818;
 }
 
 .container {
@@ -19,6 +30,7 @@ body {
 }
 
 .card__content--image {
+   background-color: azure;
    width: 50%;
 }
 
@@ -29,7 +41,5 @@ body {
 
 .card__content--title {
    font-size: 27px;
-   font-weight: normal;
    text-align: center;
-   color: #181818;
 }
