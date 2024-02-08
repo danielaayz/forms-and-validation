@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-   width: 90%;
+   width: 100%;
    max-width: 1400px;
    display: flex;
    margin: auto;
@@ -41,21 +41,21 @@ body {
 
 .card__content {
    width: 100%;
-   background-color: #ececec;
    display: flex;
-   flex-direction: column;
-   justify-content: space-around;
+   justify-content: space-evenly;
    align-items: center;
+}
+
+.form {
+   max-width: 334px;
+   position: relative;
 }
 
 .card__content--title {
    font-size: 27px;
    text-align: center;
    font-weight: normal;
-}
-
-.form {
-   max-width: 334px;
+   margin-bottom: 17px;
 }
 
 .label {
@@ -65,90 +65,101 @@ body {
 }
 
 .input-field {
+   width: 100%;
    border: 1px solid rgba(159, 159, 159, 0.4);
    background-color: #fff;
    padding-left: 16px;
    min-height: 40px;
    border-radius: 0px;
-   margin-bottom: 8px;
+   margin-bottom: 16px;
 }
 
-.checkbox-container {
-   display: flex;
-   align-items: center;
+.input-field:focus {
+   background-color: #ddd;
+   outline: none;
 }
 
-/* .checkbox-label {
+/* Styling Checkbox Starts */
+
+.checkbox-label {
    display: block;
    position: relative;
    cursor: pointer;
+   font-size: 14px;
+   line-height: 24px;
+   padding-left: 35px;
+   margin-bottom: 12px;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
    clear: both;
-} */
+}
 
+/* hide the browser's default checkbox */
 .checkbox-label input {
    position: absolute;
    opacity: 0;
    cursor: pointer;
 }
 
-.checkbox-label .checkbox-custom {
+/* Create a custom checkbox */
+.checkbox-label .checkmark {
    position: absolute;
    top: 0px;
    left: 0px;
-   height: 24px;
-   width: 24px;
-   background-color: transparent;
-   border-radius: 5px;
-   border: 2px solid #fff;
-
-   transition: all 0.3s ease-out;
-   -webkit-transition: all 0.3s ease-out;
-   -moz-transition: all 0.3s ease-out;
-   -ms-transition: all 0.3s ease-out;
-   -o-transition: all 0.3s ease-out;
-}
-
-.checkbox-label .checkbox-customer::after {
-   position: absolute;
-   content: "";
-   left: 12px;
-   top: 12px;
-   height: 0px;
-   width: 0px;
-   border-radius: 5px;
-   border: solid #181818;
-   border-width: 0 3px 3px 0;
-   -webkit-transform: rotate(0deg) scale(0);
-   -ms-transform: rotate(0deg) scale(0);
-   transform: rotate(0deg) scale(0);
-   opacity: 1;
-
-   transition: all 0.3s ease-out;
-}
-
-.checkbox-label input:checked ~ .checkbox-custom {
+   height: 25px;
+   width: 25px;
    background-color: #fff;
-   border-radius: 5px;
-   -webkit-transform: rotate(0deg) scale(1);
-   -ms-transform: rotate(0deg) scale(1);
-   opacity: 1;
-   border: 2px solid #fff;
+   transition: all 0.3s ease-out;
 }
 
-.checkbox-label input:checked ~ .checkbox-customer::after {
-   -webkit-transform: rotate(45deg) scale(1);
-   -ms-transform: rotate(45deg) scale(1);
-   transform: rotate(45deg) scale(1);
-   opacity: 1;
-   left: 8px;
-   top: 3px;
-   width: 6px;
-   height: 12px;
-   border: solid #009bff;
-   border-width: 0 2px 2px 0;
-   background-color: transparent;
-   border-radius: 0;
+/* On mouse-over, add a grey background color */
+.checkbox-label:hover input ~ .checkmark {
+   background-color: #ccc;
 }
+
+/* When the checkbox is checked, add a white background */
+.checkbox-label input:checked ~ .checkmark {
+   background-color: #fff;
+   transform: rotate(0deg) scale(1);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox-label .checkmark::after {
+   content: "";
+   position: absolute;
+   /* transform: rotate(0deg) scale(0); */
+   transition: all 0.3s ease-out;
+   left: 9px;
+   top: 5px;
+   width: 5px;
+   height: 10px;
+   border: solid rgb(69, 69, 69);
+   border-width: 0 3px 3px 0;
+   -webkit-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   transform: rotate(45deg);
+}
+
+/* show the checkmark when checked */
+.checkbox-label input:checked ~ .checkmark::after {
+   transform: rotate(45deg) scale(1);
+   display: block;
+}
+
+/* Style the checkmark/indicator */
+/* .checkbox-label .checkmark::after {
+   left: 9px;
+   top: 5px;
+   width: 5px;
+   height: 10px;
+   border: solid rgb(69, 69, 69);
+   border-width: 0 3px 3px 0;
+   -webkit-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   transform: rotate(45deg);
+} */
 
 .input-title {
    position: absolute;
@@ -159,14 +170,21 @@ body {
 .button {
    width: 100%;
    border: 0px;
-   padding: 8px 12px;
+   padding: 11px 12px;
    font-size: 15px;
    color: rgb(246, 246, 246);
    background-color: rgba(69, 69, 69);
    cursor: pointer;
    display: inline-block;
+   margin-top: 8px;
 }
 
 .button:hover {
    background-color: rgb(167, 167, 167);
+}
+
+.card__content--info {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
 }

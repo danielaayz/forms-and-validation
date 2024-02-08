@@ -8,9 +8,6 @@
          rel="stylesheet"
          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
       <link rel="stylesheet" href="css/style.css" />
-      <script
-         src="https://kit.fontawesome.com/a14db3a8ab.js"
-         crossorigin="anonymous"></script>
    </head>
    <body>
       <main>
@@ -22,62 +19,63 @@
                   alt="a branch from a fig tree" />
             </div>
             <div class="card__content">
-               <h1 class="card__content--title">
-                  Welcome to Ruby. Create your account here
-               </h1>
                <form class="form" action="">
-                  <!-- <div class="form__content--name"> -->
-                  <label class="label" for="name">Full name</label>
-                  <input
-                     id="name"
-                     class="input-field"
-                     type="text"
-                     name="name"
-                     placeholder="Enter your name"
-                     required
-                     autofocus />
-                  <!-- </div> -->
-                  <label class="label" for="email">E-mail adress</label>
-                  <input
-                     id="email"
-                     class="input-field"
-                     type="email"
-                     name="email"
-                     placeholder="Enter your e-mail"
-                     required />
-                  <label class="label" for="password">Password</label>
-                  <input
-                     id="password"
-                     class="input-field"
-                     type="password"
-                     name="password"
-                     placeholder="Enter your password"
-                     required
-                     minlength="8" />
-                  <label class="label" for="password">Confirm password</label>
-                  <input
-                     id="confirmPassword"
-                     class="input-field"
-                     type="password"
-                     name="confirmPassword"
-                     placeholder="Confirm your password"
-                     required
-                     minlength="8" />
-                  <div class="checkbox-container">
-                     <label class="checkbox-label" for="">
-                        <input type="checkbox" />
-                        <span class="checkbox-custom"> </span>
-                        <div class="input-title">
-                           I agree to the <a href="#">Terms & Privacy</a>
-                        </div>
+                  <div class="card__content--form">
+                     <h1 class="card__content--title">
+                        Welcome to Ruby. Create your account here
+                     </h1>
+                     <label class="label" for="name">Full name</label>
+                     <input
+                        id="name"
+                        class="input-field"
+                        type="text"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                        autofocus />
+                     <label class="label" for="email">E-mail adress</label>
+                     <input
+                        id="email"
+                        class="input-field"
+                        type="email"
+                        name="email"
+                        placeholder="Enter your e-mail"
+                        required />
+                     <label class="label" for="password">Password</label>
+                     <input
+                        id="password"
+                        class="input-field"
+                        type="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                        minlength="8" />
+                     <label class="label" for="password"
+                        >Confirm password</label
+                     >
+                     <input
+                        id="confirmPassword"
+                        class="input-field"
+                        type="password"
+                        name="confirmPassword"
+                        placeholder="Confirm your password"
+                        required
+                        minlength="8" />
+
+                     <label class="checkbox-label" for="checkbox"
+                        >I agree to the <a href="#">Terms & Privacy</a>
+                        <input id="checkbox" type="checkbox" checked />
+                        <span class="checkmark"></span>
                      </label>
+                     <div class="clearfix">
+                        <button class="button" type="submit">Sign up</button>
+                     </div>
                   </div>
-                  <button class="button" type="submit">Sign up</button>
                </form>
-               <div class="card__content--info">
+               <!-- <div class="card__content--info">
                   <p>Already have a Ruby account?</p>
                   <p><a href="#">Sign in</a></p>
-               </div>
+               </div> -->
             </div>
          </div>
       </main>
