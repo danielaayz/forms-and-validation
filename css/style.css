@@ -182,9 +182,3 @@ body {
 .button:hover {
    background-color: rgb(167, 167, 167);
 }
-
-.card__content--info {
-   display: flex;
-   flex-direction: column;
-   text-align: center;
-}
