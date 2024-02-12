@@ -33,7 +33,6 @@ body {
 }
 
 .card__content--image {
-   background-color: azure;
    width: 100%;
    height: 100%;
    object-fit: cover;
@@ -84,16 +83,15 @@ body {
 .checkbox-label {
    display: block;
    position: relative;
+   padding-left: 35px;
+   margin-bottom: 12px;
    cursor: pointer;
    font-size: 14px;
    line-height: 24px;
-   padding-left: 35px;
-   margin-bottom: 12px;
    -webkit-user-select: none;
    -moz-user-select: none;
    -ms-user-select: none;
    user-select: none;
-   clear: both;
 }
 
 /* hide the browser's default checkbox */
@@ -101,6 +99,8 @@ body {
    position: absolute;
    opacity: 0;
    cursor: pointer;
+   height: 0;
+   width: 0;
 }
 
 /* Create a custom checkbox */
@@ -111,7 +111,6 @@ body {
    height: 25px;
    width: 25px;
    background-color: #fff;
-   transition: all 0.3s ease-out;
 }
 
 /* On mouse-over, add a grey background color */
@@ -122,34 +121,22 @@ body {
 /* When the checkbox is checked, add a white background */
 .checkbox-label input:checked ~ .checkmark {
    background-color: #fff;
-   transform: rotate(0deg) scale(1);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkbox-label .checkmark::after {
    content: "";
    position: absolute;
-   /* transform: rotate(0deg) scale(0); */
-   transition: all 0.3s ease-out;
-   left: 9px;
-   top: 5px;
-   width: 5px;
-   height: 10px;
-   border: solid rgb(69, 69, 69);
-   border-width: 0 3px 3px 0;
-   -webkit-transform: rotate(45deg);
-   -ms-transform: rotate(45deg);
-   transform: rotate(45deg);
+   display: none;
 }
 
 /* show the checkmark when checked */
 .checkbox-label input:checked ~ .checkmark::after {
-   transform: rotate(45deg) scale(1);
    display: block;
 }
 
 /* Style the checkmark/indicator */
-/* .checkbox-label .checkmark::after {
+.checkbox-label .checkmark::after {
    left: 9px;
    top: 5px;
    width: 5px;
@@ -159,7 +146,7 @@ body {
    -webkit-transform: rotate(45deg);
    -ms-transform: rotate(45deg);
    transform: rotate(45deg);
-} */
+}
 
 .input-title {
    position: absolute;
